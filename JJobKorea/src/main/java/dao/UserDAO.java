@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao {
+public class UserDAO {
 
 	public boolean usernameExists(Connection con, String username) throws SQLException {
 		String sql = "SELECT 1 FROM User WHERE username = ?";

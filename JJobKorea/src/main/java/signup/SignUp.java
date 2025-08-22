@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.mindrot.jbcrypt.BCrypt;
-import dao.JobCategoryDao;
-import dao.LocationDao;
-import dao.UserDao;
+import dao.JobCategoryDAO;
+import dao.LocationDAO;
+import dao.UserDAO;
 import dto.Option;
 import util.DBUtil;
 
 @WebServlet(urlPatterns = "/signup")
 public class SignUp extends HttpServlet {
-	private final LocationDao locationDao = new LocationDao();
-	private final JobCategoryDao jobDao = new JobCategoryDao();
-	private final UserDao userDao = new UserDao();
+	private final LocationDAO locationDao = new LocationDAO();
+	private final JobCategoryDAO jobDao = new JobCategoryDAO();
+	private final UserDAO userDao = new UserDAO();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -67,8 +67,8 @@ public class SignUp extends HttpServlet {
 				doGet(req, resp);
 				return;
 			}
-			if (!new LocationDao().existsById(con, locationId)
-					|| !new JobCategoryDao().existsById(con, jobCategoryId)) {
+			if (!new LocationDAO().existsById(con, locationId)
+					|| !new JobCategoryDAO().existsById(con, jobCategoryId)) {
 				req.setAttribute("error", "허용되지 않은 선택값입니다.");
 				doGet(req, resp);
 				return;

@@ -1,13 +1,13 @@
 package service;
 
+import java.util.List;
+
 import dao.JobCategoryDAO;
 import dao.JobPostingDAO;
 import dao.LocationDAO;
 import model.JobCategory;
 import model.JobPosting;
 import model.Location;
-
-import java.util.List;
 
 public class JobService {
     private JobPostingDAO jobPostingDAO;
