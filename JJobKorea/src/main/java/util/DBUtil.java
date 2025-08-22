@@ -20,7 +20,6 @@ public final class DBUtil {
 		cfg.setMinimumIdle(2);
 		cfg.setPoolName("AppPool");
 		ds = new HikariDataSource(cfg);
-
 	}
 
 	private DBUtil() {
