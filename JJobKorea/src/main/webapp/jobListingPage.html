@@ -1,181 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>채용공고</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-        .main-header {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .main-header h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin: 0;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto 30px;
-            padding: 0 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            margin-left: 20px;
-            font-size: 1.1em;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .filter-form {
-            display: flex; /* Make the form a flex container */
-            justify-content: center;
-            align-items: center; /* Align items vertically */
-            gap: 20px; /* Space between items */
-            margin-bottom: 40px;
-        }
-        .filter-group {
-            display: flex;
-            align-items: center;
-            gap: 10px; /* Space between label and select */
-        }
-        .filter-form label {
-            font-weight: bold;
-        }
-        .filter-form select, .filter-form input[type="submit"] {
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            font-size: 1em;
-        }
-        .filter-form input[type="submit"] {
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-            border: none;
-            font-weight: bold;
-        }
-        .filter-form input[type="submit"]:hover {
-            background-color: #218838;
-        }
+<meta charset="UTF-8">
+<title>채용공고</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+}
 
-        .job-list {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .job-listing {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .job-title {
-            font-size: 1.6em;
-            color: #007bff;
-            margin-bottom: 5px;
-        }
-        .company-name {
-            font-size: 1.3em;
-            color: #555;
-            margin-bottom: 5px;
-        }
-        .location {
-            font-style: italic;
-            color: #777;
-            margin-bottom: 15px;
-        }
-        .details {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 1em;
-            color: #666;
-        }
-        .details p {
-            margin: 0;
-            padding-right: 20px;
-            border-right: 1px solid #ddd;
-        }
-        .details p:last-child {
-            border-right: none;
-        }
-    </style>
+.main-header {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.main-header h1 {
+	font-size: 2.5em;
+	color: #333;
+	margin: 0;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1000px;
+	margin: 0 auto 30px;
+	padding: 0 20px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #007bff;
+	font-weight: bold;
+	margin-left: 20px;
+	font-size: 1.1em;
+}
+
+.nav-links a:hover {
+	text-decoration: underline;
+}
+
+.filter-form {
+	display: flex; /* Make the form a flex container */
+	justify-content: center;
+	align-items: center; /* Align items vertically */
+	gap: 20px; /* Space between items */
+	margin-bottom: 40px;
+}
+
+.filter-group {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* Space between label and select */
+}
+
+.filter-form label {
+	font-weight: bold;
+}
+
+.filter-form select, .filter-form input[type="submit"] {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-size: 1em;
+}
+
+.filter-form input[type="submit"] {
+	background-color: #28a745;
+	color: white;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+}
+
+.filter-form input[type="submit"]:hover {
+	background-color: #218838;
+}
+
+.job-list {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.job-listing {
+	background-color: #fff;
+	padding: 25px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.job-title {
+	font-size: 1.6em;
+	color: #007bff;
+	margin-bottom: 5px;
+}
+
+.company-name {
+	font-size: 1.3em;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.location {
+	font-style: italic;
+	color: #777;
+	margin-bottom: 15px;
+}
+
+.details {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	font-size: 1em;
+	color: #666;
+}
+
+.details p {
+	margin: 0;
+	padding-right: 20px;
+	border-right: 1px solid #ddd;
+}
+
+.details p:last-child {
+	border-right: none;
+}
+</style>
 </head>
 <body>
-    <header class="main-header">
-        <h1>잡코리아</h1>
-    </header>
+	<header class="main-header">
+		<h1>잡코리아</h1>
+	</header>
 
-    <div class="header-content">
-        <h1>채용공고 목록</h1>
-        <div class="nav-links">
-            <a href="/listings?filter=preferred">찜한 공고</a>
-            <a href="/listings?filter=all">전체 공고</a>
-        </div>
-    </div>
-    
-    <div class="filter-form">
-        <form action="/listings" method="get" style="display: flex; gap: 20px;">
-            <div class="filter-group">
-                <label for="category">관심 직무:</label>
-                <select name="category" id="category">
-                    <option value="">전체</option>
-                    <option value="IT">IT</option>
-                    <option value="서비스업">서비스업</option>
-                    </select>
-            </div>
-            
-            <div class="filter-group">
-                <label for="location">지역:</label>
-                <select name="location" id="location">
-                    <option value="">전체</option>
-                    <option value="서울">서울특별시</option>
-                    <option value="경기도">경기도</option>
-                    <option value="충청남도">충청남도</option>
-                    </select>
-            </div>
-            
-            <input type="submit" value="필터링">
-        </form>
-    </div>
+	<div class="header-content">
+		<h1>채용공고 목록</h1>
+		<div class="nav-links">
+			<a href="/listings?filter=preferred">찜한 공고</a> <a
+				href="/listings?filter=all">전체 공고</a>
+		</div>
+	</div>
 
-    <main class="job-list">
-        <div class="job-listing">
-            <h2 class="job-title">Java 웹 개발자</h2>
-            <div class="company-name">테크 솔루션즈</div>
-            <div class="location">서울</div>
-            <div class="details">
-                <p>연봉: 5000만원</p>
-                <p>학력: 대졸</p>
-                <p>경력: 3년 이상</p>
-                <p>마감일: 2025-10-31</p>
-            </div>
-        </div>
+	<div class="filter-form">
+		<form action="/listings" method="get"
+			style="display: flex; gap: 20px;">
+			<div class="filter-group">
+				<label for="category">관심 직무:</label> <select name="category"
+					id="category">
+					<option value="">전체</option>
+					<option value="IT">IT</option>
+					<option value="서비스업">서비스업</option>
+				</select>
+			</div>
 
-        <div class="job-listing">
-            <h2 class="job-title">React 프론트엔드 개발자</h2>
-            <div class="company-name">미래기술</div>
-            <div class="location">경기도</div>
-            <div class="details">
-                <p>연봉: 4500만원</p>
-                <p>학력: 학력무관</p>
-                <p>경력: 신입</p>
-                <p>마감일: 2025-11-15</p>
-            </div>
-        </div>
-        
-        </main>
+			<div class="filter-group">
+				<label for="location">지역:</label> <select name="location"
+					id="location">
+					<option value="">전체</option>
+					<option value="서울">서울특별시</option>
+					<option value="경기도">경기도</option>
+					<option value="충청남도">충청남도</option>
+				</select>
+			</div>
+
+			<input type="submit" value="필터링">
+		</form>
+	</div>
+
+	<main class="job-list">
+		<div class="job-listing">
+			<h2 class="job-title">Java 웹 개발자</h2>
+			<div class="company-name">테크 솔루션즈</div>
+			<div class="location">서울</div>
+			<div class="details">
+				<p>연봉: 5000만원</p>
+				<p>학력: 대졸</p>
+				<p>경력: 3년 이상</p>
+				<p>마감일: 2025-10-31</p>
+			</div>
+		</div>
+
+		<div class="job-listing">
+			<h2 class="job-title">React 프론트엔드 개발자</h2>
+			<div class="company-name">미래기술</div>
+			<div class="location">경기도</div>
+			<div class="details">
+				<p>연봉: 4500만원</p>
+				<p>학력: 학력무관</p>
+				<p>경력: 신입</p>
+				<p>마감일: 2025-11-15</p>
+			</div>
+		</div>
+
+	</main>
 </body>
 </html>
